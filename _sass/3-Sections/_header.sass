@@ -1,0 +1,64 @@
+.site-header
+  border-bottom: solid 0.833em $hrBottomBorderColor
+.wrapper
+  display: flex
+  flex-flow: nowrap
+  position: relative
+  margin: 0 1.11em
+  padding-top: 1.11em
+  +size(auto, 27.78em)
+.site-nav-desktop
+  position: absolute
+  border-bottom: 0.222em solid $bottomBorderColorOnText
+  +size(43.3em, 1.25em)
+  text-align: center
+.site-title
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  margin: auto
+.placeholder-title
+  transition: $logoTransition
+  width: 60vw
+  max-width: 1148.4px
+  height: auto
+  svg
+    width: 100%
+    height: 100%
+.placeholder-kicker
+  transition: $logoTransition
+  width: 45vw
+  height: auto
+  max-width: 861.3px
+  svg
+    width: 100%
+    height: 100%
+.site-logo
+  position: absolute
+  right: 0em
+  top: 0.5em
+  width: 18vw
+  height: auto
+  max-width: 344.5px
+  svg
+    width: 100%
+    height: 100%
+.site-links
+  position: relative
+  top: 0.333em
+  padding-right: 0.56em
+  font:
+    weight: 700
+  &:last-child
+    padding-right: 0em
+
++media-query($on-mobile)
+  .site-nav-desktop
+    display: none
+  .placeholder-title
+    width: 80vw
+  .placeholder-kicker
+    width: 65vw
+  .site-logo
+    width: 30vw

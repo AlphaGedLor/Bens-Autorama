@@ -1,0 +1,42 @@
+<section class="about">
+  <div class="overlay"></div>
+
+  <article class="column1 ">
+    <div class="btm-bdr-bar placeholder-title-about">
+        <h1 class="about-header pacifico">Who we are</h1>
+        <a name="{{ page.link1 }}"></a>
+    </div>
+    <section class="container-about">
+        {% if page.environment == 'restoration' %}
+        <div class="placeholder-glennski">
+            {% include glennski.html %}
+        </div>
+        {% else %}
+        <div class="placeholder-ben">
+            {% include ben.html %}
+        </div>
+        {% endif %}
+        <p class="about-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </section>
+  </article>
+  <article class="column2">
+    <div class="btm-bdr-bar placeholder-shop-header"><h1 class="pacifico">Check out the shop</h1></div>
+    <section id="slider-container">
+          <div class="previous">
+            <a>◂</a>
+          </div>
+          <div class="next">
+            <a>▸</a>
+          </div>
+        <ul class="slides">
+            {% include img-clickable.html %}
+        </ul>
+    </section>
+  </article>
+</section>

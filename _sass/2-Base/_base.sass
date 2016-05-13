@@ -1,0 +1,19 @@
+=text-border($width, $color)
+  text-shadow: $width $width $color, $width $width $color, (-$width) ($width) $color, ($width) (-$width) $color, (-$width) (-$width) $color, ($width) ($width) $color, (-$width) $width $color, $width (-$width) $color
+=media-query($device)
+  @media screen and (max-width: $device)
+    @content
+=media-query-min($device)
+  @media screen and (min-width: $device)
+    @content
+=borderRadius($size)
+  -webkit-border-radius: $size
+  -moz-border-radius: $size
+  border-radius: $size
+.btm-bdr-bar
+  border-bottom: solid 6px $bottomBorderColorOnText
+.pacifico
+  font-family: 'Pacifico Regular'
+  +text-border(1px, $textShadowColor)
+  color: white
+  -webkit-font-smoothing: antialiased

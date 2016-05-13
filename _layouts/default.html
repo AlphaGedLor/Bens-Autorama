@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+  {% include head.html%}
+{% if page.environment == 'restoration'%}
+  <body class="site-color2">
+{%else%}
+  <body class="site-color1">
+{% endif %}
+    <input type="checkbox" id="sidebartoggler">
+    <div class="page-wrap">
+      <label for="sidebartoggler" class="toggle">☰</label>
+      <div class="page-content">
+        {% include header.html %}
+        {% include who-we-are.html %}
       </div>
-    </div>
+      {% include sidebar.html %}
 
-    {% include footer.html %}
+    </div>
+    <script src="../assets/js/jquery.min.js" charset="utf-8"></script>
+    <script src="../assets/js/slider.js" charset="utf-8"></script>
+    <script src="../assets/js/sidebar.js" charset="utf-8"></script>
 
   </body>
 

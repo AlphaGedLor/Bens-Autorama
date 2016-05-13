@@ -1,0 +1,68 @@
+\:root
+  font-size: 18px
+  font-family: 'Fira Sans'
+
+.site-color1
+  background-color: $swapMeetColor
+.site-color2
+  background-color: $restoColor
+
+body
+  letter-spacing: 0.111em
+  -webkit-font-smoothing: antialiased
+  nav
+    a
+      color: $linkColorNav
+      +text-border(1px, $textShadowColor)
+      font-size: 1.11em
+      &:hover
+        color: $linkHoverColorNav
+        +text-border(1px, $linkColorNav)
+.page-content
+  z-index: 0
+  position: relative
+  transition: $sidebarTransition
+.side-bar
+  transition: $sidebarTransition
+  width: 6.667em
+  padding: 1.667em
+  background: #333
+  position: fixed
+  top: 0px
+  left: -10.556em
+  bottom: 0px
+  z-index: 0
+.toggle
+  font-size: 1.88em
+  display: none
+  color: $linkColorNav
+  +text-border(1px, $textShadowColor)
+  transition: $sidebarTransition
+  position: fixed
+  top: 0.58em
+  left: 0px
+  z-index: 1
+  text-decoration: none
+  cursor: pointer
+
+#sidebartoggler
+  display: none
++media-query($on-mobile)
+  #sidebartoggler
+    &:checked + .page-wrap
+      .side-bar
+        left: 0px
+      .toggle
+        left: 180px
+      .page-content
+        padding-left: 10em
+  .toggle
+    display: block
+  .side-bar
+    display: block
++media-query-min(1001px)
+  .side-bar
+    display: none
+    left: -10.556em
+  .page-content
+    padding-left: auto
