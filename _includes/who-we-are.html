@@ -1,9 +1,9 @@
 <section class="about">
+  <a name="{{ page.link1 }}"></a>
   <div class="overlay"></div>
   <article class="column1 ">
     <div class="btm-bdr-bar placeholder-title-about">
         <h1 class="about-header pacifico">Who we are</h1>
-        <a name="{{ page.link1 }}"></a>
     </div>
     <section class="container-about">
         {% if page.environment == 'restoration' %}
@@ -27,15 +27,15 @@
   <article class="column2">
     <div class="btm-bdr-bar placeholder-shop-header"><h1 class="pacifico">Check out the shop</h1></div>
     <section id="slider-container">
-          <div class="previous">
-            <a>◂</a>
-          </div>
-          <div class="next">
-            <a>▸</a>
-          </div>
-        <ul class="slides">
-            {% include img-clickable.html %}
-        </ul>
+      <div class="previous">
+        <a class="ion-android-arrow-dropleft-circle"></a>
+      </div>
+      <div class="next">
+        <a class="ion-android-arrow-dropright-circle"></a>
+      </div>
+      <ul class="slides">
+        {% include img-clickable.html %}
+      </ul>
     </section>
   </article>
 </section>

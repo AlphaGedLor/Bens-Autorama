@@ -61,22 +61,23 @@
   align-items: center
   align-content: stretch
   #slider-container
-    // margin-top: 150px
     position: relative
     width: 720px
     height: 400px
     overflow: hidden
+    border: 10px solid white
+    border-radius: 5px
     .slides
       display: block
-      width: 8640px
-      height: 400px
+      width: 300%
+      height: 100%
       margin: 0
       padding: 0
     .slide
       float: left
       list-style-type: none
-      width: 720px
-      height: 400px
+      width: 100%
+      height: 100%
     img
       z-index: 1
       width: 720px
@@ -86,28 +87,26 @@
       position: absolute
       z-index: 2
       cursor: pointer
-      background-color: #333
+      background-color: white
       padding: 5px
       +borderRadius(35px)
       +size(35px)
       display: flex
       justify-content: center
       align-items: center
-      a
-        position: relative
-        left: 1px
-        font-size: 4em
-        text-align: center
+      font-size: 4em
+      a:hover
+        color: lighten($iconColor, 20)
   .previous
     top: 45.6%
-    left: 5px
+    left: 15px
   .next
     top: 45.6%
-    right: 5px
+    right: 15px
   .placeholder-shop-header
     z-index: 1
     position: relative
-    top: -91px
+    top: -25px
     +size(320px, 80px)
     text-align: center
 +media-query($on-mobile)
@@ -119,11 +118,11 @@
   .about-text
     padding-bottom: 20px
   .column1
-    margin: 30px
+    margin: 35px
   .column2
     height: 600px
     flex-flow: column
     align-content: space-around
-  .placeholder-shop-header
-    // position: relative
-    // top: auto
+    #slider-container
+      width: 340px
+      height: 400px

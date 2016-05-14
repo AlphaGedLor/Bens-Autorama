@@ -24,14 +24,18 @@ body
   transition: $sidebarTransition
 .side-bar
   transition: $sidebarTransition
-  width: 6.667em
+  height: 13em
   padding: 1.667em
   background: #333
   position: fixed
-  top: 0px
-  left: -10.556em
-  bottom: 0px
+  left: 0px
+  top: -20em
+  right: 0px
   z-index: 0
+  hr
+    width: 100vw
+  .website-link
+    padding: none
 .toggle
   font-size: 1.88em
   display: none
@@ -51,11 +55,11 @@ body
   #sidebartoggler
     &:checked + .page-wrap
       .side-bar
-        left: 0px
+        top: 0px
       .toggle
-        left: 180px
+        top: 10em
       .page-content
-        padding-left: 10em
+        // padding-top: 10em
   .toggle
     display: block
   .side-bar
@@ -63,6 +67,6 @@ body
 +media-query-min(1001px)
   .side-bar
     display: none
-    left: -10.556em
+    top: -10.556em
   .page-content
-    padding-left: auto
+    padding-top: auto
