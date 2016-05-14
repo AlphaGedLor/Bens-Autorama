@@ -8,9 +8,9 @@
             <a class="site-links" href="#{{ page.link4 }}">{{ page.link4 }}</a>
             <a class="site-links" href="#{{ page.link5 }}">{{ page.link5 }}</a>
             {%if page.environment == 'restoration'%}
-            <a class="site-links" href="/index.html">Go To Swap Meet</a>
+            <a class="site-links" href="{{site.url}}">Go To Swap Meet</a>
             {%else%}
-            <a class="site-links" href="/restoration.html">Go to Restoration</a>
+            <a class="site-links" href="{{site.url}}restoration.html">Go to Restoration</a>
             {% endif %}
         </nav>
         <div class="site-title">
@@ -21,9 +21,9 @@
         </div>
         <div class="site-logo">
             {% if page.environment == 'restoration'%}
-            <a href="/index.html" >{% include Restologo.html %}</a>
+            <a href="{{site.url}}" >{% include Restologo.html %}</a>
             {% else %}
-            <a href="/restoration.html" >{% include SwapmeetLogo.html %}</a>
+            <a href=href="{{site.url}}restoration.html" >{% include SwapmeetLogo.html %}</a>
             {% endif %}
         </div>
     </section>
