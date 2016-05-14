@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html%}
-{% if page.environment == 'restoration'%}
+<!-- {% if page.environment == 'restoration'%} -->
   <body class="site-color2">
-{%else%}
+<!-- {%else%} -->
   <body class="site-color1">
-{% endif %}
+<!-- {% endif %} -->
     <input type="checkbox" id="sidebartoggler">
     <div class="page-wrap">
       <label for="sidebartoggler" class="toggle">☰</label>
       <div class="page-content">
-        {% include header.html %}
       </div>
-      {% include sidebar.html %}
 
     </div>
     <script src="../assets/js/jquery.min.js" charset="utf-8"></script>
