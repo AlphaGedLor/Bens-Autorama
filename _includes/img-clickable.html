@@ -1,0 +1,8 @@
+{% for image in site.static_files %}
+{% if image.path contains 'img/shop' %}
+<li class="slide">
+    <!-- <img class="main-img" > -->
+    <img class="main-img" src="{{site.url}}{{image.path}}">
+</li>
+{% endif %}
+{% endfor %}

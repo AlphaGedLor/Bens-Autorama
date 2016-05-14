@@ -1,0 +1,31 @@
+<header class="site-header">
+
+    <section class="wrapper">
+        <nav class="site-nav-desktop">
+            <a class="site-links" href="#{{ page.link1 }}">{{ page.link1 }}</a>
+            <a class="site-links" href="#{{ page.link2 }}">{{ page.link2 }}</a>
+            <a class="site-links" href="#{{ page.link3 }}">{{ page.link3 }}</a>
+            <a class="site-links" href="#{{ page.link4 }}">{{ page.link4 }}</a>
+            <a class="site-links" href="#{{ page.link5 }}">{{ page.link5 }}</a>
+            {%if page.environment == 'restoration'%}
+            <a class="site-links" href="/index.html">Go To Swap Meet</a>
+            {%else%}
+            <a class="site-links" href="/restoration.html">Go to Restoration</a>
+            {% endif %}
+        </nav>
+        <div class="site-title">
+            <div class="placeholder-title">{% include MainTitleBens.html %}</div>
+            <div class="placeholder-kicker">
+                {% if page.environment == 'restoration'%} {% include RestoEmblem.html %} {% else %} {% include SwapMeetEmblem.html %} {% endif %}
+            </div>
+        </div>
+        <div class="site-logo">
+            {% if page.environment == 'restoration'%}
+            <a href="/index.html" >{% include Restologo.html %}</a>
+            {% else %}
+            <a href="/restoration.html" >{% include SwapmeetLogo.html %}</a>
+            {% endif %}
+        </div>
+    </section>
+
+</header>

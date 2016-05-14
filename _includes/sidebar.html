@@ -1,0 +1,15 @@
+<div class="side-bar">
+    <nav class="site-nav-mobile">
+        <a class="site-links-mobile" href="#{{ page.link1 }}">{{ page.link1 }}</a>
+        <a class="site-links-mobile" href="#{{ page.link2 }}">{{ page.link2 }}</a>
+        <a class="site-links-mobile" href="#{{ page.link3 }}">{{ page.link3 }}</a>
+        <a class="site-links-mobile" href="#{{ page.link4 }}">{{ page.link4 }}</a>
+        <a class="site-links-mobile" href="#{{ page.link5 }}">{{ page.link5 }}</a>
+        <hr>
+        {% if page.environment == 'restoration' %}
+        <a class="site-links-mobile website-link" href="/index.html">Go to Swap Meet</a> {%else%}
+        <a class="site-links-mobile website-link" href="/restoration.html">Go to Restoration</a>
+        {% endif %}
+
+    </nav>
+</div>
