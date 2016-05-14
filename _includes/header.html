@@ -10,7 +10,7 @@
             {%if page.environment == 'restoration'%}
             <a class="site-links" href="{{site.url}}">Go To Swap Meet</a>
             {%else%}
-            <a class="site-links" href="{{site.url}}restoration.html">Go to Restoration</a>
+            <a class="site-links" href="{{site.url}}/restoration.html">Go to Restoration</a>
             {% endif %}
         </nav>
         <div class="site-title">
@@ -23,7 +23,7 @@
             {% if page.environment == 'restoration'%}
             <a href="{{site.url}}" >{% include Restologo.html %}</a>
             {% else %}
-            <a href=href="{{site.url}}restoration.html" >{% include SwapmeetLogo.html %}</a>
+            <a href=href="{{site.url}}/restoration.html" >{% include SwapmeetLogo.html %}</a>
             {% endif %}
         </div>
     </section>
