@@ -59,7 +59,7 @@ coverage
 build/Release
 
 # Dependency directories
-img
+
 _node_modules
 jspm_packages
 
